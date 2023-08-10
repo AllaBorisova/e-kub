@@ -1,0 +1,55 @@
+.services {
+  &__columns {
+    display: grid;
+    grid-template-columns: 34% 62%;
+    gap: 4%;
+    margin-bottom: 4.7rem;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+
+  &__flex {
+    display: flex;
+    gap: 4rem;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &__info {
+    padding-left: 2.3rem;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    color: $color2;
+    background: url(../img/attention.png) top left no-repeat;
+  }
+  &__desc:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+  ul {
+    @include ulClean;
+    margin-bottom: 2.5rem;
+    li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+      &:before {
+        content: "";
+        display: block;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background: $color2;
+        position: absolute;
+        left: 0px;
+        top: 0.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.footer {
+  background: #ffffff;
+  padding-top: 3.5rem;
+  border-top: 1px solid $color-border;
+  .logo {
+    flex: none;
+  }
+  .container_flex {
+    gap: 4rem;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+    @media (max-width: 992px) {
+      // justify-content: center;
+      justify-content: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 767px) {
+      justify-content: flex-start;
+    }
+  }
+  &__top {
+    padding-bottom: 2.5rem;
+  }
+  &__phones {
+    padding-left: 3.7rem;
+    background: url(../img/phone-call.png) top left no-repeat;
+    background-size: 2.5rem;
+  }
+  &__phone {
+    display: block;
+    font-weight: bold;
+    color: $color1;
+    line-height: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  &__email {
+    display: block;
+    color: $color2;
+    margin-bottom: 0.5rem;
+  }
+  &__menu {
+    display: flex;
+    gap: 6rem;
+    align-items: flex-start;
+    font-size: 2.1rem;
+    line-height: 3rem;
+    flex-wrap: wrap;
+    @media (max-width: 1440px) {
+      gap: 3rem;
+    }
+    ul {
+      @include ulClean;
+      li {
+        a {
+          display: block;
+          font-weight: bold;
+          color: $color3;
+        }
+        ul {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 3.4rem;
+          li {
+            a {
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__address {
+    max-width: 30rem;
+    line-height: 2.5rem;
+  }
+  &__bottom {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    // background: $color-footer-bg;
+    font-size: 1.8rem;
+    border-top: 1px solid $color-border;
+    color: $color3;
+    .container_flex {
+      padding-top: 1.5rem;
+      padding-bottom: 0rem;
+    }
+    .container_flex {
+      justify-content: flex-start;
+      align-items: center;
+      gap: 4rem;
+      @media (max-width: 992px) {
+        gap: 1rem;
+      }
+    }
+    .copyright {
+      max-width: 88.4rem;
+    }
+    .create {
+      margin-left: auto;
+      @media (max-width: 992px) {
+        margin-left: 0px;
+      }
+      a {
+        color: $color3;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

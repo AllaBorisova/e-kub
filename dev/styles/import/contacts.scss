@@ -1,0 +1,96 @@
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 4.8rem;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .h1 {
+    margin-top: 0px;
+  }
+  &__left {
+    padding-right: 5rem;
+    @media (max-width: 768px) {
+      padding-right: 0px;
+    }
+  }
+  &__info {
+    position: relative;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+  &__subtitle {
+    color: $color3;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.6rem;
+    font-weight: bold;
+    position: relative;
+  }
+  &__block {
+    margin-bottom: 3.5rem;
+    padding-left: 4rem;
+    p {
+      margin-bottom: 0.5rem;
+    }
+    &_phones {
+      .contacts__info {
+        &:before {
+          content: "";
+          width: 1.7rem;
+          height: 1.8rem;
+          background: url(../img/phone.png) center center no-repeat;
+          background-size: cover;
+          position: absolute;
+          display: block;
+          left: -4rem;
+          top: 0px;
+        }
+      }
+      a {
+        display: block;
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+    }
+    &_address {
+      .contacts__info {
+        &:before {
+          content: "";
+          width: 1.6rem;
+          height: 2.1rem;
+          background: url(../img/pin.png) center center no-repeat;
+          background-size: cover;
+          position: absolute;
+          display: block;
+          left: -4rem;
+          top: 0px;
+        }
+      }
+    }
+    &_vk {
+      .contacts__subtitle {
+        &:before {
+          content: "";
+          width: 2.3rem;
+          height: 1.3rem;
+          background: url(../img/vk-social-network-logo.png) center center
+            no-repeat;
+          background-size: cover;
+          position: absolute;
+          display: block;
+          left: -4rem;
+          top: 0.5rem;
+        }
+      }
+      a {
+        color: $color2;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

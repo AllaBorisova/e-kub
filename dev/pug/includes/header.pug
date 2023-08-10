@@ -1,0 +1,26 @@
+header.header
+	.container.container_flex
+		a.logo(href="/index.html")
+			img(src="./img/logo.png" alt="")
+			span.logo__text Е-Куб
+		nav.menu
+			ul
+				li
+					a(href="") Главная
+				li
+					a(href="") Покупаем
+				li
+					a(href="") Продаем
+				li
+					a.active(href="") Услуги
+				li
+					a(href="") Контакты
+		.header__contacts
+			.header__phones
+				a.header__phone(href="tel:+78555483434") 8 (8555) 48-34-34
+				span.phones-divider /
+				a.header__phone(href="tel:+79274848888") 8-927-484-88-88
+			a.header__callback(href="") Свяжитесь со мной
+		.hamburger.hamburger--squeeze.js-hamburger
+			.hamburger-box
+				.hamburger-inner
